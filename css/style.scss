@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Titillium+Web:wght@300;400;600;700;900&display=swap");
+
+// Variable List
+
+$font-primary: "Titillium Web", sans-serif;
+$font-secondary: "Oswald", sans-serif;
+$color-brown: #ffaa30;
+
+// ?Variable List
+
+// Modified Part
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+.cbrown {
+  color: $color-brown;
+}
+.btn_brown {
+  background-color: $color-brown;
+  &:hover {
+    background-color: #428bdc;
+  }
+}
+.sec_title {
+  h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      background-color: #777;
+      width: 40px;
+      height: 2px;
+      bottom: -8px;
+      left: 0;
+    }
+  }
+}
+// ?START FROM HERE
+
+.fixed_nav .main_nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+// ?Header Section
+.header_sec {
+  .top_nav {
+    border-bottom: 1px solid #a09d9d40;
+    padding: 5px 0px;
+    .edu_intro {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      color: #777;
+      span {
+        color: #444;
+      }
+
+      .fab:hover {
+        color: $color-brown !important;
+      }
+      &:hover {
+        color: $color-brown !important;
+      }
+    }
+    .social_nav_item {
+      .nav-link {
+        padding-left: 15px !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+  .main_nav {
+    .navbar {
+      padding: 30px 0px;
+      .dropdown-menu {
+        background-color: #091b29;
+        top: 73px;
+        width: 250px;
+        padding: 0;
+
+        .dropdown-item {
+          color: #fff;
+          border-bottom: 1px solid #ffffff36;
+          padding: 15px 20px;
+          &:hover {
+            background-color: $color-brown;
+            padding-left: 30px;
+          }
+        }
+      }
+      .nav-link {
+        font-weight: 300;
+        font-size: 17px;
+        color: #777;
+        text-transform: uppercase;
+        padding-left: 30px;
+        padding-right: 30px;
+        &.active,
+        &:hover {
+          color: $color-brown;
+        }
+      }
+      form {
+        i {
+          font-size: 18px;
+          color: #fff;
+          background-color: $color-brown;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 50%;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: #fff;
+            background-color: #428bdc;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ?Header Section
+
+// ?Banner Section
+.banner_sec {
+  .carousel-item {
+    max-height: 100vh;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #000000;
+      opacity: 0.5;
+    }
+    .banner_content {
+      h1 {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 60px;
+        letter-spacing: 2px;
+      }
+      p {
+        font-size: 20px;
+        padding: 0px 20%;
+      }
+    }
+  }
+}
+// ?Banner Section
+
+// ?Design Section
+.design_sec {
+  .design_content {
+    h2 {
+      font-size: 40px;
+      max-width: 500px;
+    }
+    .btn_brown_outline {
+      color: $color-brown;
+      border: 2px solid $color-brown;
+      &:hover {
+        color: #fff;
+        background-color: $color-brown;
+      }
+    }
+  }
+  .design_wrapper {
+    padding: 0px 5px !important;
+    .design_item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+// ?Design Section
+
+// ?Course Section
+.courses_sec {
+  position: relative;
+  .owl-nav {
+    position: absolute;
+    right: 20px;
+    top: -15%;
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .owl-nav span {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background: dodgerblue;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+  }
+  .owl-nav span:hover {
+    color: #fff;
+    background-color: $color-brown;
+  }
+
+  .course_item {
+    .card-title {
+      .price {
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+        background-color: #428bdc;
+        right: -35px;
+        top: 0;
+        display: inline-block;
+        padding: 3px 15px;
+      }
+      .triangle-bottomleft{
+        position: absolute;
+        top: -15px;
+        right: -35px;
+        border-bottom: 15px solid #428bdc;
+        border-right: 15px solid transparent;
+      }
+    }
+
+    .card-body {
+      .card_widget {
+        .widget {
+          position: relative;
+          &:last-child{
+            margin-right: 0 !important;
+          }
+          &:before {
+            background-color: #a7a0a07d;
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 40px;
+            right: -15px;
+            top: 5px;
+          }
+
+          &:last-child:before {
+            display: none;
+          }
+          span, p{
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+// ?Course Section
+
+// ?CTA Section
+.cta_sec {
+  background-image: url(../img/bg-parallax1.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 50vh;
+  .overlay {
+    background-color: #000000;
+    opacity: 0.8;
+  }
+  .cta_content {
+    position: relative;
+    z-index: 9;
+    h4 {
+      font-family: $font-primary;
+      font-size: 25px;
+      color: #888888;
+
+      span {
+        font-size: 60px;
+        font-weight: 400;
+        color: $color-brown;
+      }
+    }
+    .cta_text {
+      padding: 0 10%;
+      font-size: 20px;
+      color: #fff;
+    }
+    .btn {
+      font-size: 18px;
+      &:hover {
+        color: #fff !important;
+        background-color: $color-brown !important;
+        border-color: $color-brown;
+      }
+    }
+  }
+}
+// ?CTA Section
+
+// ? NEWS Section
+.news_sec {
+  .news_img {
+    cursor: pointer;
+    overflow: hidden;
+    img {
+      transform: scale(1);
+      transition: 0.3s linear;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+  .news_content {
+    .date {
+      margin-right: 10px;
+      padding: 10px;
+      font-size: 20px;
+      color: #ffaa30;
+      border: 2px solid #ffaa30;
+      max-height: 80px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .main_content {
+      h3 {
+        position: relative;
+        top: -5px;
+        font-family: $font-primary;
+        font-size: 22px;
+        font-weight: 500;
+        color: #777;
+      }
+
+      .news_widget {
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: #777;
+          top: -10px;
+          left: 0;
+          width: 15%;
+          height: 2px;
+        }
+        h5 {
+          font-size: 17px;
+          font-weight: 400;
+          color: #777;
+          a {
+            font-family: $font-primary;
+          }
+        }
+      }
+    }
+  }
+}
+// ? NEWS Section
+
+// ?Brand Section
+.brand_sec {
+  .owl-carousel .owl-item img {
+    width: inherit !important;
+    display: block;
+    margin: auto;
+  }
+}
+
+// ?Brand Section
+
+// ?Testmonial Section
+
+.test_sec {
+  background-image: url(../img/bg-testimonial.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .testmonial {
+    background-color: #fffefddb;
+    border-radius: 5px;
+    text-align: center;
+    padding: 150px 50px 60px;
+    
+    .test_content {
+      position: relative;
+      blockquote {
+        font-size: 20px;
+        font-weight: 600;
+        color: #666;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        background: url(../img/testimonial-icon.png) no-repeat;
+        top: -80px;
+        left: 50%;
+        width: 60px;
+        height: 60px;
+        transform: translateX(-50%);
+      }
+      .test_author{
+          h4{
+              color: #9f9c9a;
+
+          }
+          h6{
+              font-family: $font-primary;
+              font-weight: 400;
+              color: #777;
+          }
+      }
+
+    }
+  }
+
+  .owl-dots{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    .owl-dot{
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border: 1px solid $color-brown;
+        border-radius: 50%;
+        margin: 3px;
+      &.active{
+        background-color: $color-brown;
+      }
+    }
+  }
+}
+
+// ?Testmonial Section
+
+// ?Newsletter Section
+.newsletter_section{
+  .news_text{
+    padding:0 15%;
+    font-size: 18px;
+  }
+  p{
+    a{
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $color-brown;
+      &:hover{
+        color: #428bdc;
+      }
+    }
+  }
+  .news_photo{
+    background-image: url(../img/bg-news-letter.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 650px;
+  }
+
+}
+// ?Newsletter Section
+
+// ?Footer Section
+.footer_sec{
+  background-color: #222222;
+  .sec_title{
+    h2{
+      &::before{
+        background-color: #ffaa30;
+        bottom: -15px;
+      }
+    }
+  }
+  .footer_link{
+    ul{
+      li{
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .footer_menu{
+    .nav-link{
+      font-size: 15px;
+      color: #777;
+      padding: 5px 0px;
+      &:hover{
+        color: $color-brown;
+      }
+    }
+  }
+  .footer_widget{
+    .course{
+      border-bottom: 1px solid #ffffff27;
+      padding-bottom: 20px;
+      h6{
+        a{
+          color: #777;
+          &:hover{
+            color: $color-brown;
+          }
+        }
+      }
+    }
+    .stars{
+      .fa-star{
+        font-size: 13px;
+        color: $color-brown;
+      }
+      span{
+        font-size: 13px;
+        color: #fff;
+      }
+    }
+
+    input, textarea{
+      background-color: transparent;
+      border: 1px solid #777;
+      
+    }
+    input:focus{
+      color:#fff !important; 
+    }
+    textarea:focus{
+      color:#fff !important; 
+    }
+
+    button{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+
+  .last_footer{
+    nav{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        width: 40%;
+        height: 2px;
+        bottom: 16px;
+        left: 0;
+        background-color: #ded5d51f;
+      }
+      &::after{
+        position: absolute;
+        content: "";
+        width: 40%;
+        height: 2px;
+        bottom: 16px;
+        right: 0;
+        background-color: #ded5d51f;
+      }
+      .nav-item{
+        .nav-link{
+          color: #777;
+          padding-left: 10px;
+          padding-right: 40px;
+          position: relative;
+          z-index: 99;
+          &:hover{
+            color: $color-brown;
+          }
+        }
+        &:first-child .nav-link{
+          padding-left: 0;
+        }
+        &:last-child .nav-link{
+          padding-right: 0;
+        }
+
+        .tline:after, .vline:after{
+          position: absolute;
+          content: "";
+          width: 20px;
+          height: 2px;
+          right: 5px;
+          bottom: 16px;
+          background-color: #ded5d51f;
+        }
+        .tline:before{
+          position: absolute;
+          content: "";
+          width: 20px;
+          height: 2px;
+          left: -25px;
+          bottom: 16px;
+          background-color: #ded5d51f;
+        }
+
+
+      }
+    }
+    
+  }
+
+}
+// ?Footer Section
+
+
+
+
+
+// *Media Queries*
+
+@media (max-width: 991px) {
+  .banner_content {
+    width: 100% !important;
+    h1 {
+      font-size: 40px !important;
+    }
+    p {
+      padding: 0 10% !important;
+    }
+  }
+  .design_sec {
+    .design_content {
+      h2 {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .courses_sec {
+    .owl-nav {
+      display: none !important;
+    }
+  }
+  
+  .last_footer{
+    nav{
+      &:before{
+        width: 32% !important;
+
+      }
+      &:after{
+        width: 32% !important;
+        
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cta_sec {
+    .cta_content {
+      .cta_text {
+        padding: 0;
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+  }
+  .newsletter_section{
+    .news_caption{
+      bottom: 30px !important;
+    }
+    .input-group{
+      width: 95% !important;
+      button{
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+      }
+    }
+  }
+  .last_footer{
+    nav{
+      &:before{
+        width: 25% !important;
+
+      }
+      &:after{
+        width: 25% !important;
+        
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .header_sec{
+    .main_nav{
+      .navbar{
+        padding: 10px 5px;
+      }
+    }
+  }
+  .banner_content {
+    width: 100% !important;
+    h1 {
+      font-size: 20px !important;
+    }
+    p.mb-30 {
+      display: none !important;
+    }
+    button {
+      font-size: 12px !important;
+      padding: 10px 15px !important;
+    }
+  }
+  .design_sec {
+    .design_content {
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+  .cta_sec {
+    .cta_content {
+      h4 {
+        font-size: 20px;
+        span {
+          font-size: 30px;
+        }
+      }
+      .cta_text {
+        font-size: 16px;
+      }
+    }
+  }
+  .newsletter_section{
+    .news_caption{
+      p{
+        padding: 0 0 !important;
+      }
+    }
+  }
+  .last_footer{
+    nav{
+      &:before{
+        width: 15% !important;
+
+      }
+      &:after{
+        width: 15% !important;
+        
+      }
+    }
+  }
+
+}
